@@ -1,0 +1,9 @@
+.aboutme {
+    width: 100%;
+    overflow: visible;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: justify;
+}

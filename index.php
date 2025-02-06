@@ -1,0 +1,118 @@
+<?php
+$name = "Ivan Cankov"
+?>
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <title><?php echo $name ?></title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/stylesheet.css">
+
+<body>
+<link rel="stylesheet" href="css/bar.css">
+<!--<nav class="bar">-->
+<!--    <div class="left-nav">-->
+<!--        <a class="nav-element" href="#">Left 1</a>-->
+<!--        <a class="nav-element" href="#">Left 2</a>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="center-nav">-->
+<!--        <a class="nav-element" href="#">Center 1</a>-->
+<!--        <a class="nav-element" href="#">Center 2</a>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="right-nav">-->
+<!--        <a class="nav-element" href="#">Right 1</a>-->
+<!--        <a class="nav-element" href="#">Right 2</a>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<link rel="stylesheet" href="css/head.css">
+<div class="container">
+    <div class="align">
+        <div class="head align">
+            <?php echo $name ?>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="css/intro.css">
+<div class="container">
+    <div class="intro align">
+        Bulgarian jr.&nbsp;
+        <div id="shadowBox">
+            <div class="rainbow rainbow_text_animated"> software engineer&nbsp;</div>
+        </div>
+        <div class="student">and student at TU Wien.</div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="css/interests.css">
+<div class="interests">
+    <div class="placeholder">
+        <div class="resume icon" id="resume"></div>
+        <div class="text">View Resume</div>
+    </div>
+    <div class="placeholder">
+        <div class="about icon" id="aboutme"></div>
+        <div class="text">Contact and About Me</div>
+    </div>
+    <div class="placeholder">
+        <div class="projects icon3" id="projects"></div>
+        <div class="text">View Projects</div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="css/white.css">
+<div class="white">
+    <div class="container">
+        <div class="align">
+            <div class="head align">
+                About Me
+            </div>
+        </div>
+        <div class="align"></div>
+        <div class="align"></div>
+    </div>
+
+    <link rel="stylesheet" href="css/aboutme.css">
+    <div class="container">
+        <div class="align">
+            <div class="aboutme" id="about-section">
+                Hey there! I'm a software and technology enthusiast from Bulgaria (BG), currently pursuing a Bachelor's
+                degree in Software & Information Engineering at TU Wien. I have a deep passion for learning languages
+                so far, I speak Bulgarian (BG), Hungarian (HU), English (EN), German (DE), and Swedish (SE).
+
+                In my free time, you'll likely find me either lifting weights at the gym or working on side projects to
+                explore new programming concepts. I'm always eager to take on new challenges and expand my skill set.
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="css/contact.css">
+    <div class="container">
+        <div class="align">
+            <div class="contact">
+                <p>📞 Phone: <a href="tel:+43 677 61028961">+43 677 61028961</a></p>
+                <p>📧 Email: <a href="mailto:ivanecankov@gmail.com">ivanecankov@gmail.com</a></p>
+                <p>🔗 Connect with me:
+                    <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a> |
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+                    <a href="https://github.com/Ikurooo" target="_blank">GitHub</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="align">
+            <div class="contact">© 2025 Ivan Cankov. All rights reserved.</div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="scripts/divbutton.js"></script>
+</html>

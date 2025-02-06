@@ -1,0 +1,26 @@
+.bar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  z-index: 1000;
+}
+
+.left-nav, .center-nav, .right-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.center-nav {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-element {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 8px;
+}

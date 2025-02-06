@@ -1,0 +1,86 @@
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2vh;
+    padding: 5vh 5vw 20vh 5vw;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.wide-card {
+    border: 5px solid #0099ff;
+    position: relative;
+    color: rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    height: 10em;
+    width: 100%;
+    flex: 1 auto;
+    aspect-ratio: 3 / 4;
+    min-width: 400px;
+    transition: transform 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out,
+    filter 0.4s ease-in-out,
+    opacity 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pic,
+.reverse,
+.rabbit,
+.plugin {
+    background-color: #f2f2f2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.plugin {
+    background-image: url("../assets/plugin.png");
+}
+
+.pic {
+    background-image: url("../assets/pic.png");
+}
+
+.reverse {
+    background-image: url('../assets/reverse.png');
+}
+
+.rabbit {
+    background-image: url("../assets/rabbit.png");
+}
+
+.plugin:hover,
+.pic:hover,
+.reverse:hover,
+.rabbit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    filter: blur(5px);
+    opacity: 0.6;
+}
+
+.text {
+    pointer-events: none;
+    position: absolute;
+    color: #f2f2f2;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    visibility: hidden;
+}
+
+.wide-card:hover .text {
+    opacity: 1;
+    visibility: visible;
+}
