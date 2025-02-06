@@ -1,5 +1,5 @@
 document.getElementById("resume").addEventListener("click", function () {
-    window.location.href = "resume.php"
+    window.location.href = "resume.pdf"
 });
 
 document.getElementById("aboutme").addEventListener("click", function () {
@@ -7,5 +7,5 @@ document.getElementById("aboutme").addEventListener("click", function () {
 });
 
 document.getElementById("projects").addEventListener("click", function () {
-    window.location.href = "projects.php"
+    window.location.href = "projects.html"
 });
