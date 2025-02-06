@@ -1,5 +1,5 @@
 document.getElementById("resume").addEventListener("click", function () {
-    window.location.href = "assets/resume.pdf"
+    window.location.href = "pdf/resume.pdf"
 });
 
 document.getElementById("aboutme").addEventListener("click", function () {
