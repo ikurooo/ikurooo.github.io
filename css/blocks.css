@@ -39,6 +39,11 @@ h3 {
         justify-content: center;
     }
 
+    pre {
+        align-items: center;
+        justify-content: center;
+    }
+
     .reverse {
         flex-direction: column-reverse;
     }
