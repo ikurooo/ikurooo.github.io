@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <title>Tiny Reverse Proxy</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/stylesheet.css">
+<link rel="stylesheet" href="css/blocks.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+
+<body>
+<link rel="stylesheet" href="css/head.css">
+<div class="container">
+  <div class="align">
+    <div class="head align">
+      A Lightweight Reverse Proxy Built in Go
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="align">
+    <link rel="stylesheet" href="css/aboutme.css">
+    <div class="aboutme" id="about-section">
+
+      <h1>Tiny Reverse Proxy</h1>
+      <p>TinyRP is a lightweight reverse proxy server built in Go. It routes requests to different backend services
+        based on configuration defined in a YAML file. This project allows you to easily mock server responses
+        using Docker containers.</p>
+
+      <h2>To Start The Servers</h2>
+      <pre><code class="language-plaintext">make run-containers</code></pre>
+
+      <h2>To Install Dependencies and Run the Proxy</h2>
+      <pre><code class="language-plaintext">
+go mod tidy
+go run tinyrp.go</code></pre>
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="css/white.css">
+<link rel="stylesheet" href="css/contact.css">
+<div class="white">
+  <div class="container">
+    <div class="head align">
+      Implementation Highlights:
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="align block">
+      <h3>Conveniently configure server routes in config.yaml.</h3>
+
+      <pre><code class="language-yaml">
+resources:
+  - name: images
+    endpoint: /server1
+    destination_url: "http://localhost:9001"
+  - name: users
+    endpoint: /server2
+    destination_url: "http://localhost:9002"
+  - name: api
+    endpoint: /server3
+    destination_url: "http://localhost:9003"
+
+</code></pre>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="align block reverse">
+      <h3>Testing made easy with <a href="https://httpbin.org" target="_blank" rel="noopener noreferrer">httpbin</a> for seamless request/response validation.</h3>
+
+      <pre><code class="language-shell">
+## run: starts demo http services
+.PHONY: run-containers
+run-containers:
+	docker run --rm -d -p 9001:80 --name server1 kennethreitz/httpbin
+	docker run --rm -d -p 9002:80 --name server2 kennethreitz/httpbin
+	docker run --rm -d -p 9003:80 --name server3 kennethreitz/httpbin
+
+## stop: stops all demo services
+.PHONY: stop
+stop:
+	docker stop server1
+	docker stop server2
+	docker stop server3
+
+</code></pre>
+    </div>
+  </div>
+  <div class="container">
+    <div class="align">
+      <div class="contact">
+        <p>🔗 View The Project On GitHub:
+          <a href="https://github.com/ikurooo/tiny_reverse_proxy" target="_blank">Tiny Reverse Proxy</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="align">
+      <div class="contact">© 2025 Ivan Cankov. All rights reserved.</div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+</body>
