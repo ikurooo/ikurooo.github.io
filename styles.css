@@ -1,8 +1,10 @@
+@charset "UTF-8";
+
 :root {
-  --md-sys-color-primary: #d63384; /* Kräftiges Pink für Buttons/Links */
+  --md-sys-color-primary: #d63384;
   --md-sys-color-surface: #ffffff;
-  --md-sys-color-background: #efefef; /* Dein gewünschter Google-Hintergrund */
-  --md-sys-color-secondary-container: #ffdab9; /* Peach */
+  --md-sys-color-background: #efefef;
+  --md-sys-color-secondary-container: #ffdab9;
   --md-sys-color-on-surface: #1c1b1f;
   --md-sys-color-outline: #79747e;
 }
