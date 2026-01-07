@@ -1,0 +1,123 @@
+:root {
+  --md-sys-color-primary: #d63384; /* Kräftiges Pink für Buttons/Links */
+  --md-sys-color-surface: #ffffff;
+  --md-sys-color-background: #efefef; /* Dein gewünschter Google-Hintergrund */
+  --md-sys-color-secondary-container: #ffdab9; /* Peach */
+  --md-sys-color-on-surface: #1c1b1f;
+  --md-sys-color-outline: #79747e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-surface);
+  font-family: 'Roboto', sans-serif; /* Material Design Standard */
+  margin: 0;
+  padding: 0;
+}
+
+/* Skip-Link für Barrierefreiheit */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--md-sys-color-primary);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+.skip-link:focus { top: 0; }
+
+header {
+  background-color: #ffb7c5; /* Light Pink */
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --- Responsive Grid --- */
+.product-grid {
+  display: grid;
+  gap: 24px;
+  /* 3 Spalten auf Desktop, 1 Spalte auf Mobile */
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Material Design Card --- */
+.product-card {
+  background-color: var(--md-sys-color-surface);
+  border-radius: 16px; /* Material 3 Style */
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--md-sys-color-secondary-container);
+  object-fit: cover;
+}
+
+.product-content {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-title {
+  font-size: 1.25rem;
+  margin: 0 0 8px 0;
+}
+
+.product-price {
+  font-weight: bold;
+  color: var(--md-sys-color-primary);
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+button {
+  background-color: var(--md-sys-color-primary);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+button:focus {
+  outline: 3px solid #000;
+}
+
+.footer-section {
+  background: white;
+  margin-top: 50px;
+  padding: 40px 20px;
+  border-top: 1px solid #ddd;
+}

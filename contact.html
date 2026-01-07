@@ -1,10 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | mwahhh kittyyy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 28px;
+            max-width: 600px;
+            margin: 40px auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+            margin-top: 20px;
+        }
+        input, textarea {
+            padding: 12px;
+            border: 2px solid var(--accent-peach);
+            border-radius: 12px;
+            font-family: inherit;
+        }
+        button { align-self: center; margin-top: 10px; }
+    </style>
 </head>
 <body>
+
+<header>
+    <h1>mwahhh kittyyy</h1>
+    <nav><a href="index.html" style="color: var(--text-dark);">← Zurück zum Shop</a></nav>
+</header>
+
+<main class="container">
+    <div class="contact-card">
+        <h2>Schreib uns!</h2>
+        <p>Hast du Fragen zu deiner Bestellung oder willst einfach eine Frage stellen? Wir sind für dich da!</p>
+
+        <form class="contact-form" onsubmit="alert('Danke! Deine Nachricht wurde gesendet'); return false;">
+            <label for="name">Dein Name</label>
+            <input type="text" id="name" placeholder="Wie heißt du?" required>
+
+            <label for="email">Deine E-Mail</label>
+            <input type="email" id="email" placeholder="kitty@example.com" required>
+
+            <label for="message">Deine Nachricht</label>
+            <textarea id="message" rows="5" placeholder="Was gibts Neues?" required></textarea>
+
+            <button type="submit">Abschicken</button>
+        </form>
+    </div>
+</main>
+
+<footer class="footer-section">
+    <div class="container">
+        <h3>Barrierefreiheitserklärung</h3>
+        <p>Kontakt für Barrieren: <a href="mailto:access@mwahhh-kittyyy.com">access@mwahhh-kittyyy.com</a></p>
+        <p>&copy; 2026 mwahhh kittyyy | <a href="license.html">Lizenz</a> | <a href="privacy.html">Datenschutz</a> | <a href="imprint.html">Impressum</a> | <a href="contact.html">Kontakt</a> | <a href="brand.html">Marke</a></p>
+    </div>
+
+</footer>
 
 </body>
 </html>
